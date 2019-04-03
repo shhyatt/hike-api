@@ -1,6 +1,7 @@
 class CreateHikes < ActiveRecord::Migration[5.2]
   def change
     create_table :hikes do |t|
+      t.string :name
       t.string :type
       t.string :summary
       t.string :difficulty
@@ -21,7 +22,7 @@ class CreateHikes < ActiveRecord::Migration[5.2]
       t.float :latitude
       t.string :conditionStatus
       t.string :conditionDetails
-      t.string :conditionDate
+      t.datetime :conditionDate
 
       t.timestamps
     end

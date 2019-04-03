@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2019_04_03_163910) do
   end
 
   create_table "hikes", force: :cascade do |t|
+    t.string "name"
     t.string "type"
     t.string "summary"
     t.string "difficulty"
@@ -44,7 +45,7 @@ ActiveRecord::Schema.define(version: 2019_04_03_163910) do
     t.float "latitude"
     t.string "conditionStatus"
     t.string "conditionDetails"
-    t.string "conditionDate"
+    t.datetime "conditionDate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
