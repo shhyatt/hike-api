@@ -18,27 +18,6 @@ User.create({first_name: "Mollimer", last_name: "Jones", email: "molly@woof.com"
 User.create({first_name: "Sam", last_name: "Hyatt", email: "sam@hello.com", password_digest: "123" })
 User.create({first_name: "Pickles", last_name: "Cat", email: "pickles@meow.com", password_digest: "123" })
 
-Photo.create({img: "https://cdn.britannica.com/s:500x350/17/83817-004-C5DB59F8.jpg", user_id: 1, hike_id: 8 })
-
-Photo.create({img: "https://micato-woz6qxzwhvcnrugsanv.netdna-ssl.com/wp-content/uploads/2018/09/mt-kilimanjaro-1110x700.jpg", user_id: 2, hike_id: 9 })
-
-Photo.create({img: "https://media-cdn.tripadvisor.com/media/photo-s/02/4d/8d/72/the-main-falls.jpg", user_id: 3, hike_id: 6 })
-
-Photo.create({img: "https://i.ytimg.com/vi/KbtZfzxX44o/maxresdefault.jpg", user_id: 4, hike_id: 5 })
-
-Photo.create({img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcCSkhlIEp1QDm8EXcgFI1Bk57sI2ziLcrvRVIb0OpzOawSKVQuw", user_id: 5, hike_id: 1 })
-
-Comment.create({content: "Too many bears", user_id: 6, hike_id: 1})
-
-Comment.create({content: "Not enough bears!", user_id: 1, hike_id: 2})
-
-Comment.create({content: "I only saw 1 bear!", user_id: 2, hike_id: 3})
-
-Comment.create({content: "Had lunch with a couple of bears!", user_id: 3, hike_id: 4})
-
-Comment.create({content: "Saw 32 bears!", user_id: 4, hike_id: 7})
-
-
 Hike.create({name: "Breakneck Ridge", typeOfHike: "favorite", summary: "Challenging hike.", difficulty: "blue", stars: 4.5, starVotes: 54, location: "Cold Spring, New York", url: "https://www.hikingproject.com", imgSqSmall: "http://www.traverseoutfitters.com/wp-content/uploads/2014/06/photo-1.jpg", imgSmall: "http://www.traverseoutfitters.com/wp-content/uploads/2014/06/photo-1.jpg", imgSmallMed: "http://www.traverseoutfitters.com/wp-content/uploads/2014/06/photo-1.jpg", imgMedium: "http://www.traverseoutfitters.com/wp-content/uploads/2014/06/photo-1.jpg", length: 5.7, ascent: 3245, descent: -5464, high: 7657, low: 3467, longitude: -105.2755, latitude: 39.9787, conditionStatus: "Major Issues", conditionDetails: "Snowy", conditionDate: "2019-03-28"})
 
 Hike.create({name: "Horse Tooth Ridge", typeOfHike: "favorite", summary: "Great Views.", difficulty: "black", stars: 3.5, starVotes: 65, location: "Fort Collins, Colorado", url: "https://www.hikingproject.com", imgSqSmall: "http://www.traverseoutfitters.com/wp-content/uploads/2014/06/photo-1.jpg", imgSmall: "http://www.traverseoutfitters.com/wp-content/uploads/2014/06/photo-1.jpg", imgSmallMed: "http://www.traverseoutfitters.com/wp-content/uploads/2014/06/photo-1.jpg", imgMedium: "http://www.traverseoutfitters.com/wp-content/uploads/2014/06/photo-1.jpg", length: 8.7, ascent: 4325, descent: -6533, high: 8790, low: 6786, longitude: -105.2755, latitude: 39.9787, conditionStatus: "Major Issues", conditionDetails: "Snowy", conditionDate: "2019-03-28"})
@@ -58,6 +37,26 @@ Hike.create({name: "Mount Everest", typeOfHike: "favorite", summary: "Challengin
 Hike.create({name: "Kilimanjaro", typeOfHike: "favorite", summary: "Challenging hike.", difficulty: "blue", stars: 4.5, starVotes: 54, location: "Tanzania", url: "https://www.hikingproject.com", imgSqSmall: "http://www.traverseoutfitters.com/wp-content/uploads/2014/06/photo-1.jpg", imgSmall: "http://www.traverseoutfitters.com/wp-content/uploads/2014/06/photo-1.jpg", imgSmallMed: "http://www.traverseoutfitters.com/wp-content/uploads/2014/06/photo-1.jpg", imgMedium: "http://www.traverseoutfitters.com/wp-content/uploads/2014/06/photo-1.jpg", length: 5.7, ascent: 3245, descent: -5464, high: 7657, low: 3467, longitude: -105.2755, latitude: 39.9787, conditionStatus: "Major Issues", conditionDetails: "Snowy", conditionDate: "2019-03-28"})
 
 Hike.create({name: "Volcan Fuego", typeOfHike: "favorite", summary: "Challenging hike.", difficulty: "blue", stars: 4.5, starVotes: 54, location: "Guatemala", url: "https://www.hikingproject.com", imgSqSmall: "http://www.traverseoutfitters.com/wp-content/uploads/2014/06/photo-1.jpg", imgSmall: "http://www.traverseoutfitters.com/wp-content/uploads/2014/06/photo-1.jpg", imgSmallMed: "http://www.traverseoutfitters.com/wp-content/uploads/2014/06/photo-1.jpg", imgMedium: "http://www.traverseoutfitters.com/wp-content/uploads/2014/06/photo-1.jpg", length: 5.7, ascent: 3245, descent: -5464, high: 7657, low: 3467, longitude: -105.2755, latitude: 39.9787, conditionStatus: "Major Issues", conditionDetails: "Snowy", conditionDate: "2019-03-28"})
+
+Photo.create({img: "https://cdn.britannica.com/s:500x350/17/83817-004-C5DB59F8.jpg", user_id: 1, hike_id: 8 })
+
+Photo.create({img: "https://micato-woz6qxzwhvcnrugsanv.netdna-ssl.com/wp-content/uploads/2018/09/mt-kilimanjaro-1110x700.jpg", user_id: 2, hike_id: 9 })
+
+Photo.create({img: "https://media-cdn.tripadvisor.com/media/photo-s/02/4d/8d/72/the-main-falls.jpg", user_id: 3, hike_id: 6 })
+
+Photo.create({img: "https://i.ytimg.com/vi/KbtZfzxX44o/maxresdefault.jpg", user_id: 4, hike_id: 5 })
+
+Photo.create({img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcCSkhlIEp1QDm8EXcgFI1Bk57sI2ziLcrvRVIb0OpzOawSKVQuw", user_id: 5, hike_id: 1 })
+
+Comment.create({content: "Too many bears", user_id: 6, hike_id: 1})
+
+Comment.create({content: "Not enough bears!", user_id: 1, hike_id: 2})
+
+Comment.create({content: "I only saw 1 bear!", user_id: 2, hike_id: 3})
+
+Comment.create({content: "Had lunch with a couple of bears!", user_id: 3, hike_id: 4})
+
+Comment.create({content: "Saw 32 bears!", user_id: 4, hike_id: 7})
 
 State.create({name: "alabama", latitude: 32.806671, longitude: -86.791130})
 State.create({name: "alaska", latitude: 61.370716, longitude: -152.404419})
