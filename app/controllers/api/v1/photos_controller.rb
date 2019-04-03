@@ -2,7 +2,7 @@ class Api::V1::PhotosController < ApplicationController
 
   def index
     @photos = Photo.all
-    render json: @photos, status: :accepted
+    render json: @photos
   end
 
   def show
