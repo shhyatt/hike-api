@@ -1,4 +1,4 @@
 class Photo < ApplicationRecord
   belongs_to :user
-  belongs_to :hike 
+  belongs_to :have_hike 
 end
