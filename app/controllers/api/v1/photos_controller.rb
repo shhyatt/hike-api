@@ -12,12 +12,15 @@ class Api::V1::PhotosController < ApplicationController
 
   def create
     @photo = Photo.new(photo_params)
-      if @photo.save
-        render json: {errors: @photo.errors.full_messages}, status: :unprocessible_entity
-      end
+    if @photo.save
+      render json: @photo, status: :accepted
+    else
+      render json: { errors: @photo.errors.full_messages }, status: :unprocessible_entity
+    end
   end
 
   def destroy
+    @photo = Photo.find(params[:id])
     @photo.destroy
     render body: nil, status: :no_content
   end
@@ -25,7 +28,7 @@ class Api::V1::PhotosController < ApplicationController
   private
 
   def photo_params
-    params.permit(:img, :user_id, :hike_id)
+    params.permit(:img, :user_id, :hike_id, :havehike_id)
   end
 
 end

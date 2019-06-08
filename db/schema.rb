@@ -18,12 +18,13 @@ ActiveRecord::Schema.define(version: 2019_04_08_133026) do
   create_table "comments", force: :cascade do |t|
     t.string "content"
     t.integer "user_id"
-    t.integer "have_hike_id"
+    t.integer "hike_id"
+    t.integer "havehike_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "have_hikes", force: :cascade do |t|
+  create_table "havehikes", force: :cascade do |t|
     t.integer "user_id"
     t.integer "hike_id"
     t.datetime "created_at", null: false
@@ -57,7 +58,7 @@ ActiveRecord::Schema.define(version: 2019_04_08_133026) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "like_hikes", force: :cascade do |t|
+  create_table "likehikes", force: :cascade do |t|
     t.integer "user_id"
     t.integer "hike_id"
     t.datetime "created_at", null: false
@@ -67,7 +68,8 @@ ActiveRecord::Schema.define(version: 2019_04_08_133026) do
   create_table "photos", force: :cascade do |t|
     t.string "img"
     t.integer "user_id"
-    t.integer "have_hike_id"
+    t.integer "hike_id"
+    t.integer "havehike_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
